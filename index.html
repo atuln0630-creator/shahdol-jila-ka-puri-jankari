@@ -1,0 +1,634 @@
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>अपना शहडोल | Shahdol AI</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;background:#f4f7f6;color:#24332f;line-height:1.7}
+header{background:#064e3b;color:white;padding:18px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:15px}
+.logo{font-size:23px;font-weight:bold}
+nav{display:flex;gap:14px;flex-wrap:wrap}
+nav a{color:white;text-decoration:none;font-size:14px}
+nav a:hover{color:#ffd166}
+.hero{padding:85px 20px;text-align:center;background:linear-gradient(135deg,#064e3b,#087e8b);color:white}
+.hero h1{font-size:45px;margin-bottom:15px}
+.hero p{max-width:700px;margin:auto}
+.btn{display:inline-block;margin-top:22px;padding:12px 24px;border-radius:25px;background:#ffd166;color:#222;text-decoration:none;font-weight:bold}
+.container{max-width:1100px;margin:auto;padding:50px 20px}
+.title{text-align:center;margin-bottom:30px}
+.title h2{color:#087e68;font-size:29px}
+.title p{color:#718079}
+.stats,.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px}
+.stat,.card,.about{background:white;padding:23px;border-radius:13px;box-shadow:0 4px 18px #0000000c}
+.stat{text-align:center}
+.stat h2{font-size:28px;color:#087e68}
+.card h3,.about h3{color:#087e68;margin:10px 0}
+.card p,.about p{color:#586660;font-size:15px}
+.emoji{font-size:35px}
+.tag{display:inline-block;margin-top:12px;background:#e5f5ee;color:#087e68;padding:4px 10px;border-radius:20px;font-size:12px}
+.search{width:100%;padding:14px;border:1px solid #ccd8d3;border-radius:10px;margin-bottom:20px;font-size:16px}
+.faq button{width:100%;padding:15px;background:white;border:0;border-radius:9px;text-align:left;font-size:16px;color:#087e68;font-weight:bold;cursor:pointer;margin-top:10px}
+.answer{display:none;background:white;padding:15px;border-radius:8px}
+.faq.active .answer{display:block}
+.chat{max-width:750px;margin:auto;background:white;padding:20px;border-radius:15px;box-shadow:0 4px 20px #0001}
+.chat-head{background:#075b48;color:white;padding:15px;border-radius:10px}
+.messages{height:330px;overflow-y:auto;padding:12px;background:#f3f7f5;margin:15px 0;border-radius:10px}
+.msg{padding:12px;border-radius:10px;margin:10px 0;white-space:pre-wrap;overflow-wrap:anywhere}
+.user{background:#dceeff}
+.bot{background:#e1f5e9}
+.chat-form{display:flex;gap:8px}
+.chat-form input{flex:1;min-width:0;padding:13px;border:1px solid #ccd8d3;border-radius:8px}
+.chat-form button{background:#087e68;color:white;border:0;padding:12px 18px;border-radius:8px;cursor:pointer}
+.status{font-size:13px;color:#087e68;margin-top:10px}
+.links a{display:block;color:#087e68;margin:10px 0}
+footer{text-align:center;background:#064e3b;color:white;padding:30px}
+footer a{color:#ffd166}
+@media(max-width:600px){.hero h1{font-size:32px}.container{padding:35px 15px}nav a{font-size:12px}}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">🌿 अपना शहडोल</div>
+<nav>
+<a href="#home">होम</a>
+<a href="#about">परिचय</a>
+<a href="#history">इतिहास</a>
+<a href="#tourism">पर्यटन</a>
+<a href="#culture">संस्कृति</a>
+<a href="#ai">AI Chat</a>
+</nav>
+</header>
+
+<section class="hero" id="home">
+<h1>🌳 अपना शहडोल</h1>
+<p>मध्य प्रदेश का खूबसूरत जिला। इतिहास, संस्कृति, पर्यटन और प्राकृतिक सुंदरता की जानकारी एक ही जगह।</p>
+<a href="#about" class="btn">जानकारी देखें ↓</a>
+</section>
+
+<section class="container">
+<div class="stats">
+<div class="stat"><h2>5,610</h2><p>क्षेत्रफल वर्ग किमी</p></div>
+<div class="stat"><h2>10,66,063</h2><p>जनसंख्या 2011</p></div>
+<div class="stat"><h2>886</h2><p>गाँव</p></div>
+<div class="stat"><h2>MP</h2><p>मध्य प्रदेश</p></div>
+</div>
+</section>
+
+<section class="container" id="about">
+<div class="title"><h2>शहडोल का परिचय</h2><p>जिले की सामान्य जानकारी</p></div>
+<div class="about">
+<p>शहडोल मध्य प्रदेश के उत्तर-पूर्वी भाग में स्थित जिला है। शहडोल शहर इसका जिला मुख्यालय है। यह क्षेत्र जंगलों, खनिज संपदा, प्राकृतिक सुंदरता और आदिवासी संस्कृति के लिए जाना जाता है।</p>
+<h3>📍 भूगोल</h3><p>शहडोल मध्य प्रदेश के उत्तर-पूर्वी क्षेत्र में स्थित है। आसपास उमरिया, अनूपपुर और अन्य जिले हैं।</p>
+<h3>🗣️ भाषाएँ</h3><p>हिंदी, बघेली और स्थानीय बोलियाँ प्रचलित हैं।</p>
+<h3>🌳 प्राकृतिक विशेषताएँ</h3><p>यहाँ जंगल, पहाड़, नदियाँ और प्राकृतिक पर्यटन स्थल पाए जाते हैं।</p>
+</div>
+</section>
+
+<section class="container" id="history">
+<div class="title"><h2>📜 शहडोल का इतिहास</h2></div>
+<div class="about">
+<p>शहडोल क्षेत्र का इतिहास बघेलखंड और रीवा रियासत के इतिहास से जुड़ा है। स्थानीय परंपरा के अनुसार जिले के नाम की उत्पत्ति शाहडोलवा से संबंधित मानी जाती है।</p>
+<p>1948 में रियासतों के विलय के बाद जिला मुख्यालय उमरिया से शहडोल स्थानांतरित किया गया। 2003 में जिले का विभाजन हुआ और वर्तमान जिले का स्वरूप बना।</p>
+</div>
+</section>
+
+<section class="container" id="tourism">
+<div class="title"><h2>🏞️ पर्यटन स्थल</h2><p>शहडोल के प्रसिद्ध स्थान</p></div>
+<div class="grid">
+<div class="card"><div class="emoji">🛕</div><h3>विराटेश्वर मंदिर</h3><p>सोहागपुर स्थित प्राचीन शिव मंदिर और ऐतिहासिक वास्तुकला।</p><span class="tag">धार्मिक स्थल</span></div>
+<div class="card"><div class="emoji">🌊</div><h3>क्षीर सागर</h3><p>प्राकृतिक सुंदरता के लिए जाना जाने वाला क्षेत्र।</p><span class="tag">प्रकृति</span></div>
+<div class="card"><div class="emoji">🏝️</div><h3>सारसी आइलैंड</h3><p>प्राकृतिक वातावरण और पर्यटन अनुभव के लिए प्रसिद्ध स्थान।</p><span class="tag">पर्यटन</span></div>
+<div class="card"><div class="emoji">🛕</div><h3>बूढ़ी माता मंदिर</h3><p>स्थानीय धार्मिक महत्व वाला मंदिर।</p><span class="tag">धार्मिक स्थल</span></div>
+<div class="card"><div class="emoji">⛰️</div><h3>घाटी डोंगरी</h3><p>प्राकृतिक सुंदरता वाला पहाड़ी क्षेत्र।</p><span class="tag">प्रकृति</span></div>
+<div class="card"><div class="emoji">🛕</div><h3>पंचमठा मंदिर</h3><p>सिंहपुर क्षेत्र में स्थित प्रसिद्ध देवी मंदिर।</p><span class="tag">धार्मिक स्थल</span></div>
+</div>
+</section>
+
+<section class="container" id="culture">
+<div class="title"><h2>🎭 संस्कृति और परंपरा</h2></div>
+<div class="grid">
+<div class="card"><div class="emoji">🪘</div><h3>आदिवासी संस्कृति</h3><p>गोंड और बैगा सहित विभिन्न समुदायों की परंपराएँ।</p></div>
+<div class="card"><div class="emoji">💃</div><h3>लोक नृत्य</h3><p>स्थानीय लोकगीत, पारंपरिक नृत्य और उत्सव।</p></div>
+<div class="card"><div class="emoji">🎉</div><h3>त्योहार</h3><p>होली, दीपावली, दशहरा और स्थानीय त्योहार।</p></div>
+<div class="card"><div class="emoji">🌾</div><h3>कृषि</h3><p>धान, गेहूँ, मक्का और अन्य फसलें।</p></div>
+</div>
+</section>
+
+<section class="container" id="education">
+<div class="title"><h2>📚 शिक्षा और स्वास्थ्य</h2></div>
+<div class="grid">
+<div class="card"><div class="emoji">🏫</div><h3>शिक्षा</h3><p>सरकारी और निजी विद्यालय, महाविद्यालय तथा उच्च शिक्षा संस्थान।</p></div>
+<div class="card"><div class="emoji">🏥</div><h3>स्वास्थ्य</h3><p>जिले में अस्पताल, स्वास्थ्य केंद्र और मेडिकल कॉलेज उपलब्ध हैं।</p></div>
+<div class="card"><div class="emoji">⛏️</div><h3>खनिज</h3><p>क्षेत्र को कोयला और प्राकृतिक संसाधनों के लिए जाना जाता है।</p></div>
+</div>
+</section>
+
+<section class="container" id="search">
+<div class="title"><h2>🔎 जानकारी खोजें</h2></div>
+<input class="search" id="searchInput" placeholder="इतिहास, मंदिर, संस्कृति खोजें..." oninput="searchCards()">
+<div class="grid" id="searchResults">
+<div class="card"><h3>इतिहास</h3><p>शहडोल का इतिहास और पृष्ठभूमि।</p></div>
+<div class="card"><h3>विराटेश्वर मंदिर</h3><p>प्राचीन शिव मंदिर।</p></div>
+<div class="card"><h3>क्षीर सागर</h3><p>प्राकृतिक पर्यटन स्थल।</p></div>
+<div class="card"><h3>कृषि</h3><p>शहडोल की प्रमुख फसलें।</p></div>
+<div class="card"><h3>शिक्षा</h3><p>जिले की शिक्षा व्यवस्था।</p></div>
+<div class="card"><h3>आदिवासी संस्कृति</h3><p>स्थानीय परंपराएँ।</p></div>
+</div>
+</section>
+
+<section class="container" id="ai">
+<div class="title"><h2>🤖 Shahdol AI Assistant</h2><p>Groq AI से शहडोल के बारे में सवाल पूछें</p></div>
+<div class="chat">
+<div class="chat-head"><h3>🌿 Shahdol AI</h3><small>AI Assistant</small></div>
+<div class="messages" id="chatMessages">
+<div class="msg bot">नमस्ते! मैं Shahdol AI हूँ। शहडोल जिले के बारे में सवाल पूछिए।</div>
+</div>
+<div class="chat-form">
+<input id="chatInput" placeholder="अपना सवाल लिखें..." maxlength="2000">
+<button id="sendBtn" onclick="sendMessage()">Send</button>
+</div>
+<div class="status" id="chatStatus"></div>
+</div>
+</section>
+
+<section class="container" id="faq">
+<div class="title"><h2>❓ सामान्य प्रश्न</h2></div>
+<div class="faq"><button onclick="toggleFAQ(this)">शहडोल किस राज्य में है? +</button><div class="answer">शहडोल मध्य प्रदेश में स्थित है।</div></div>
+<div class="faq"><button onclick="toggleFAQ(this)">शहडोल का मुख्यालय कहाँ है? +</button><div class="answer">शहडोल शहर जिले का मुख्यालय है।</div></div>
+<div class="faq"><button onclick="toggleFAQ(this)">शहडोल किसलिए प्रसिद्ध है? +</button><div class="answer">जंगल, खनिज संसाधन, मंदिर और आदिवासी संस्कृति के लिए।</div></div>
+<div class="faq"><button onclick="toggleFAQ(this)">शहडोल का प्रसिद्ध मंदिर कौन सा है? +</button><div class="answer">विराटेश्वर मंदिर प्रमुख ऐतिहासिक मंदिरों में से एक है।</div></div>
+</section>
+
+<section class="container" id="contact">
+<div class="title"><h2>🌐 आधिकारिक वेबसाइट</h2></div>
+<div class="about links">
+<a href="https://shahdol.nic.in/" target="_blank" rel="noopener">🏛️ शहडोल जिला प्रशासन</a>
+<a href="https://shahdol.nic.in/en/tourist-places/" target="_blank" rel="noopener">🏞️ पर्यटन स्थल</a>
+<a href="https://shahdol.nic.in/en/history/" target="_blank" rel="noopener">📜 इतिहास</a>
+<a href="https://shahdol.nic.in/en/contact-us/" target="_blank" rel="noopener">☎️ संपर्क</a>
+</div>
+</section>
+
+<footer>
+<h2>🌿 अपना शहडोल</h2>
+<p>शहडोल जिले की जानकारी एक ही वेबसाइट पर।</p>
+<p>यह स्वतंत्र सूचना वेबसाइट है, सरकारी वेबसाइट नहीं।</p>
+<p>© 2026 अपना शहडोल</p>
+<a href="#home">Back to Top ↑</a>
+</footer>
+
+<script>
+function searchCards(){
+ const q=document.getElementById("searchInput").value.toLowerCase();
+ document.querySelectorAll("#searchResults .card").forEach(card=>{
+  card.style.display=card.innerText.toLowerCase().includes(q)?"block":"none";
+ });
+}
+
+function toggleFAQ(button){
+ button.parentElement.classList.toggle("active");
+}
+
+const WORKER_URL="https://YOUR-WORKER.YOUR-SUBDOMAIN.workers.dev";
+
+function addMessage(text,type){
+ const messages=document.getElementById("chatMessages");
+ const div=document.createElement("div");
+ div.className="msg "+type;
+ div.textContent=text;
+ messages.appendChild(div);
+ messages.scrollTop=messages.scrollHeight;
+}
+
+async function sendMessage(){
+ const input=document.getElementById("chatInput");
+ const btn=document.getElementById("sendBtn");
+ const status=document.getElementById("chatStatus");
+ const question=input.value.trim();
+
+ if(!question)return;
+
+ if(WORKER_URL.includes("YOUR-WORKER")){
+  status.textContent="पहले Cloudflare Worker URL सेट करें।";
+  return;
+ }
+
+ addMessage("आप: "+question,"user");
+ input.value="";
+ input.disabled=true;
+ btn.disabled=true;
+ status.textContent="AI जवाब तैयार कर रहा है...";
+
+ try{
+  const response=await fetch(WORKER_URL,{
+   method:"POST",
+   headers:{"Content-Type":"application/json"},
+   body:JSON.stringify({message:question})
+  });
+
+  const data=await response.json();
+
+  if(!response.ok)throw new Error(data.error||"API Error");
+
+  addMessage("🤖 Shahdol AI: "+data.answer,"bot");
+  status.textContent="जवाब मिल गया।";
+
+ }catch(error){
+  addMessage("AI से संपर्क नहीं हो पाया। Worker URL और API Key जाँचें।","bot");
+  status.textContent="Error: "+error.message;
+ }finally{
+  input.disabled=false;
+  btn.disabled=false;
+  input.focus();
+ }
+}
+
+document.getElementById("chatInput").addEventListener("keydown",function(e){
+ if(e.key==="Enter")sendMessage();
+});
+</script>
+
+</body>
+</html>
+
+
+
+
+
+export default {
+ async fetch(request, env) {
+  const headers = {
+   "Content-Type": "application/json",
+   "Access-Control-Allow-Origin": "*",
+   "Access-Control-Allow-Methods": "POST, OPTIONS",
+   "Access-Control-Allow-Headers": "Content-Type"
+  };
+
+  if (request.method === "OPTIONS") {
+   return new Response(null, { headers });
+  }
+
+  if (request.method !== "POST") {
+   return Response.json(
+    { error: "Only POST requests allowed" },
+    { status: 405, headers }
+   );
+  }
+
+  try {
+   const body = await request.json();
+   const question = String(body.message || "").trim();
+
+   if (!question || question.length > 2000) {
+    return Response.json(
+     { error: "Message required, maximum 2000 characters" },
+     { status: 400, headers }
+    );
+   }
+
+   if (!env.GROQ_API_KEY) {
+    return Response.json(
+     { error: "GROQ_API_KEY secret is missing" },
+     { status: 500, headers }
+    );
+   }
+
+   const result = await fetch(
+    "https://api.groq.com/openai/v1/chat/completions",
+    {
+     method: "POST",
+     headers: {
+      "Authorization": `Bearer ${env.GROQ_API_KEY}`,
+      "Content-Type": "application/json"
+     },
+     body: JSON.stringify({
+      model: "llama-3.3-70b-versatile",
+      messages: [
+       {
+        role: "system",
+        content: `You are Shahdol AI, an assistant about Shahdol district, Madhya Pradesh, India.
+
+Answer in Hindi or English depending on the user.
+Help with district history, tourism, temples, geography, culture, agriculture, education and general information.
+Be friendly, accurate and concise.
+Do not invent current statistics, official contact numbers or officer names.
+For uncertain or current government information, direct users to https://shahdol.nic.in/.
+You are an AI assistant, not a government authority.`
+       },
+       {
+        role: "user",
+        content: question
+       }
+      ],
+      temperature: 0.5,
+      max_completion_tokens: 700
+     })
+    }
+   );
+
+   const data = await result.json();
+
+   if (!result.ok) {
+    return Response.json(
+     { error: data.error?.message || "Groq request failed" },
+     { status: result.status, headers }
+    );
+   }
+
+   return Response.json({
+    answer: data.choices?.[0]?.message?.content || "No answer received."
+   }, { headers });
+
+  } catch (error) {
+   return Response.json(
+    { error: "Server error. Check request and Worker settings." },
+    { status: 500, headers }
+   );
+  }
+ }
+};
+
+export default {
+ async fetch(request, env) {
+  const headers = {
+   "Content-Type": "application/json",
+   "Access-Control-Allow-Origin": "*",
+   "Access-Control-Allow-Methods": "POST, OPTIONS",
+   "Access-Control-Allow-Headers": "Content-Type"
+  };
+
+  if (request.method === "OPTIONS") {
+   return new Response(null, { headers });
+  }
+
+  if (request.method !== "POST") {
+   return Response.json(
+    { error: "Only POST requests allowed" },
+    { status: 405, headers }
+   );
+  }
+
+  try {
+   const body = await request.json();
+   const question = String(body.message || "").trim();
+
+   if (!question || question.length > 2000) {
+    return Response.json(
+     { error: "Message required, maximum 2000 characters" },
+     { status: 400, headers }
+    );
+   }
+
+   if (!env.GROQ_API_KEY) {
+    return Response.json(
+     { error: "GROQ_API_KEY secret is missing" },
+     { status: 500, headers }
+    );
+   }
+
+   const result = await fetch(
+    "https://api.groq.com/openai/v1/chat/completions",
+    {
+     method: "POST",
+     headers: {
+      "Authorization": `Bearer ${env.GROQ_API_KEY}`,
+      "Content-Type": "application/json"
+     },
+     body: JSON.stringify({
+      model: "llama-3.3-70b-versatile",
+      messages: [
+       {
+        role: "system",
+        content: `You are Shahdol AI, an assistant about Shahdol district, Madhya Pradesh, India.
+
+Answer in Hindi or English depending on the user.
+Help with district history, tourism, temples, geography, culture, agriculture, education and general information.
+Be friendly, accurate and concise.
+Do not invent current statistics, official contact numbers or officer names.
+For uncertain or current government information, direct users to https://shahdol.nic.in/.
+You are an AI assistant, not a government authority.`
+       },
+       {
+        role: "user",
+        content: question
+       }
+      ],
+      temperature: 0.5,
+      max_completion_tokens: 700
+     })
+    }
+   );
+
+   const data = await result.json();
+
+   if (!result.ok) {
+    return Response.json(
+     { error: data.error?.message || "Groq request failed" },
+     { status: result.status, headers }
+    );
+   }
+
+   return Response.json({
+    answer: data.choices?.[0]?.message?.content || "No answer received."
+   }, { headers });
+
+  } catch (error) {
+   return Response.json(
+    { error: "Server error. Check request and Worker settings." },
+    { status: 500, headers }
+   );
+  }
+ }
+};
+
+export default {
+ async fetch(request, env) {
+  const headers = {
+   "Content-Type": "application/json",
+   "Access-Control-Allow-Origin": "*",
+   "Access-Control-Allow-Methods": "POST, OPTIONS",
+   "Access-Control-Allow-Headers": "Content-Type"
+  };
+
+  if (request.method === "OPTIONS") {
+   return new Response(null, { headers });
+  }
+
+  if (request.method !== "POST") {
+   return Response.json(
+    { error: "Only POST requests allowed" },
+    { status: 405, headers }
+   );
+  }
+
+  try {
+   const body = await request.json();
+   const question = String(body.message || "").trim();
+
+   if (!question || question.length > 2000) {
+    return Response.json(
+     { error: "Message required, maximum 2000 characters" },
+     { status: 400, headers }
+    );
+   }
+
+   if (!env.GROQ_API_KEY) {
+    return Response.json(
+     { error: "GROQ_API_KEY secret is missing" },
+     { status: 500, headers }
+    );
+   }
+
+   const result = await fetch(
+    "https://api.groq.com/openai/v1/chat/completions",
+    {
+     method: "POST",
+     headers: {
+      "Authorization": `Bearer ${env.GROQ_API_KEY}`,
+      "Content-Type": "application/json"
+     },
+     body: JSON.stringify({
+      model: "llama-3.3-70b-versatile",
+      messages: [
+       {
+        role: "system",
+        content: `You are Shahdol AI, an assistant about Shahdol district, Madhya Pradesh, India.
+
+Answer in Hindi or English depending on the user.
+Help with district history, tourism, temples, geography, culture, agriculture, education and general information.
+Be friendly, accurate and concise.
+Do not invent current statistics, official contact numbers or officer names.
+For uncertain or current government information, direct users to https://shahdol.nic.in/.
+You are an AI assistant, not a government authority.`
+       },
+       {
+        role: "user",
+        content: question
+       }
+      ],
+      temperature: 0.5,
+      max_completion_tokens: 700
+     })
+    }
+   );
+
+   const data = await result.json();
+
+   if (!result.ok) {
+    return Response.json(
+     { error: data.error?.message || "Groq request failed" },
+     { status: result.status, headers }
+    );
+   }
+
+   return Response.json({
+    answer: data.choices?.[0]?.message?.content || "No answer received."
+   }, { headers });
+
+  } catch (error) {
+   return Response.json(
+    { error: "Server error. Check request and Worker settings." },
+    { status: 500, headers }
+
+
+
+export default {
+ async fetch(request, env) {
+  const headers = {
+   "Content-Type": "application/json",
+   "Access-Control-Allow-Origin": "*",
+   "Access-Control-Allow-Methods": "POST, OPTIONS",
+   "Access-Control-Allow-Headers": "Content-Type"
+  };
+
+  if (request.method === "OPTIONS") {
+   return new Response(null, { headers });
+  }
+
+  if (request.method !== "POST") {
+   return Response.json(
+    { error: "Only POST requests allowed" },
+    { status: 405, headers }
+   );
+  }
+
+  try {
+   const body = await request.json();
+   const question = String(body.message || "").trim();
+
+   if (!question || question.length > 2000) {
+    return Response.json(
+     { error: "Message required, maximum 2000 characters" },
+     { status: 400, headers }
+    );
+   }
+
+   if (!env.GROQ_API_KEY) {
+    return Response.json(
+     { error: "GROQ_API_KEY secret is missing" },
+     { status: 500, headers }
+    );
+   }
+
+   const result = await fetch(
+    "https://api.groq.com/openai/v1/chat/completions",
+    {
+     method: "POST",
+     headers: {
+      "Authorization": `Bearer ${env.GROQ_API_KEY}`,
+      "Content-Type": "application/json"
+     },
+     body: JSON.stringify({
+      model: "llama-3.3-70b-versatile",
+      messages: [
+       {
+        role: "system",
+        content: `You are Shahdol AI, an assistant about Shahdol district, Madhya Pradesh, India.
+
+Answer in Hindi or English depending on the user.
+Help with district history, tourism, temples, geography, culture, agriculture, education and general information.
+Be friendly, accurate and concise.
+Do not invent current statistics, official contact numbers or officer names.
+For uncertain or current government information, direct users to https://shahdol.nic.in/.
+You are an AI assistant, not a government authority.`
+       },
+       {
+        role: "user",
+        content: question
+       }
+      ],
+      temperature: 0.5,
+      max_completion_tokens: 700
+     })
+    }
+   );
+
+   const data = await result.json();
+
+   if (!result.ok) {
+    return Response.json(
+     { error: data.error?.message || "Groq request failed" },
+     { status: result.status, headers }
+    );
+   }
+
+   return Response.json({
+    answer: data.choices?.[0]?.message?.content || "No answer received."
+   }, { headers });
+
+  } catch (error) {
+   return Response.json(
+    { error: "Server error. Check request and Worker settings." },
+    { status: 500, headers }
+   );
+  }
+ }
+};
+   
